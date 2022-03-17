@@ -1,0 +1,60 @@
+h1{
+    color: orange;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 75px
+}
+
+h2{
+    color: rgb(255, 195, 85);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 50px
+}
+
+
+
+button{
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,119,29,1) 0%, rgba(252,176,69,1) 100%);
+    font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: white
+}
+
+input{
+    font-size: 80px;
+    margin-bottom: 20px;
+    border: 3px solid orange;
+}
+
+p{
+    font-size: 50px;
+    color: rgb(255, 168, 37);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#podanaliczba{
+    text-align: center;
+    font-size: 50px;
+    color: #fd9f82;
+    margin-top: 50px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#silnia{
+    text-align: center;
+    font-size: 50px;
+    color: #1eb300;
+    margin-top: 50px;
+}
+
+#mnozenie{
+    text-align: center;
+    font-size: 50px;
+    color: #60fa68;
+}
+
+body {
+    background-image: url("tlo.jpg");
+}
