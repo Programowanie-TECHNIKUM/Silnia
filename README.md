@@ -1,2 +1,2 @@
 # Silnia
-Robienie silni javascript + HTML + CSS
+Robienie silnii javascript + HTML + CSS
