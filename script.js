@@ -5,9 +5,17 @@ Przypominam aby sprawdzic czy wszystko dziala nalezy kliknac kombinacje CTRL + S
 Milej zabawy <3
 */
 
+zablokowanie = 30
+
+function clear() {
+    document.getElementById("mnozenie").innerHTML = ``
+    document.getElementById("silnia").innerHTML = ``;
+}
+
 
 function hunek(){
     var szymon = Number(document.getElementsByName("liczba")[0].value);
+if(szymon <= zablokowanie) {
 
     if(!isNaN(szymon) && szymon && szymon !='0' && szymon !='1' && szymon !='2') {
         document.getElementById("podanaliczba").innerHTML = `Wpisales liczbe: ${szymon}`;
@@ -17,8 +25,9 @@ function hunek(){
         while (i <= szymon) silnia *= i++;
 
         if(silnia == 'Infinity') {
-            document.getElementById("silnia").innerHTML = `LICZBA JEST ZA DUZA!`;
-            document.getElementById("mnozenie").innerHTML = ``
+            document.getElementById("podanaliczba").style.color = "red"
+            document.getElementById("silnia").innerHTML = `LICZBA JEST ZA DUZA! (infinity)`;
+           clear()
         } else {
             document.getElementById("silnia").innerHTML = `${szymon}! = ${silnia}`;
             mnozenie();
@@ -27,8 +36,16 @@ function hunek(){
     
 
     } else {
+        clear();
+        document.getElementById("podanaliczba").style.color = "red"
         document.getElementById("podanaliczba").innerHTML = `BLAD SPRÓBUJ PONOWNIE!`;
     }
+
+} else {
+    clear();
+    document.getElementById("podanaliczba").style.color = "red"
+    document.getElementById("podanaliczba").innerHTML = `LICZBA JEST ZA DUZA! Wpisz mniejsza liczbe`;
+}
 }
 
 function mnozenie(){
@@ -36,6 +53,6 @@ function mnozenie(){
 
     var matematyka = Array.from({length: szymon}, (_, i) => i + 1)
     
-    document.getElementById("mnozenie").innerHTML = `Razem trzeba pomnozyc liczby ${matematyka}`;
+    document.getElementById("mnozenie").innerText = `Razem trzeba pomnozyc liczby ${matematyka}`;
 
 }
